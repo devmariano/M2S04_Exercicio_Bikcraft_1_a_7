@@ -63,11 +63,12 @@
     --cor-10: #2e2e2e;
     --cor-11: #111111;
     --cor-12: #000000;
-    --cor-p1: #ffbb00;
-    --cor-p2: #e4a30b;
+    --cor-p1: #fb1;
+    --cor-p2: #f2a50c;
     --cor-p3: #a66f00;
     --cor-p4: #664400;
     --cor-p5: #332200;
+
   }
   
   .cor-0 {
@@ -125,6 +126,20 @@
     color: var(--cor-p5);
   }
 
+  /*White-Theme*/
+
+.white-theme .introducao-bg {
+    background-color: white !important;
+  
+}
+
+.white-theme  h1 {
+    color: var(--black) !important;
+}
+
+.white-theme  p {
+  color: var(--black) !important;
+}
 
 /*Header*/
 
@@ -199,8 +214,8 @@
   
   /* Introdução */
   .introducao-bg {
-    background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat
-      bottom 160px left 20px;
+    background: var(--cor-12) url("../img/dec/bottom-left.svg") no-repeat bottom 160px left 20px;
+      padding-top: 15px;;
     box-shadow: inset 0 -120px var(--cor-0);
   }
   
@@ -241,7 +256,7 @@
   .botao {
     display: inline-block;
     padding: 16px 32px;
-    background: linear-gradient(#ffbf00, #f2a50c);
+    background: linear-gradient(var(--cor-p1), var(--cor-p2));
     border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
@@ -253,7 +268,7 @@
   }
   
   .botao:hover {
-    background: linear-gradient(#ffb60d, #e59317);
+    background: linear-gradient(var(--cor-p1), var(--cor-p2));
   }
   
   .botao.secundario {
@@ -264,25 +279,7 @@
   .botao.secundario:hover {
     background: var(--cor-9);
   }
-  
-  .botao.seta {
-    display: flex;
-    align-items: center;
-  }
-  
-  .botao.seta::after {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 10px;
-    margin-left: 12px;
-    background: url("../../img/icones/seta.svg");
-    transition: transform 0.2s;
-  }
-  
-  .botao.seta:hover::after {
-    transform: translateX(4px);
-  }
+
 
   /*contato*/
   #contato {
@@ -435,8 +432,8 @@
   }
   
   .bicicletas-imagem {
-    display: grid;
-    
+    position: relative;
+    display: grid; 
   }
   
   .bicicletas-imagem img {
@@ -578,8 +575,81 @@
 .titulo p {
   margin-bottom: 4px;
 }
-  
-  
+
+/*Footer*/
+
+.footer-bg {
+  background-color: var(--cor-12);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around safe;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer h4 {
+  margin-bottom: 32px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: var(--cor-1);
+}
+
+.footer li {
+  margin-bottom: 16px;
+  color: var(--cor-6);
+}
+
+.footer a {
+  color: var(--cor-6);
+}
+
+.footer a:hover {
+  color: var(--cor-1);
+}
+
+.footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 32px;
+}
+
+.footer-contact li:nth-child(even):after {
+  content: "";
+  display: block;
+  width: 360px;
+  height: 2px;
+  background: var(--cor-p12);
+  margin-top: 16px;
+}
+
+.footer-apps {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.footer-info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.footer-text-center {
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--cor-6);
+}
+
+
   
 
   
